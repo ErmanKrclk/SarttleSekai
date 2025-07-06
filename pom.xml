@@ -11,7 +11,7 @@
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <exec.mainClass>main.java.Main</exec.mainClass>
+    <exec.mainClass>main.Main</exec.mainClass>
     <javafx.version>21</javafx.version>
   </properties>
 

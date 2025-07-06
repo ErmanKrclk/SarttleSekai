@@ -1,10 +1,13 @@
-package main.java;
+package main;
+import java.io.IOException;
 import java.time.Duration;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -24,10 +27,11 @@ import javafx.geometry.Insets;
 
 public class Main extends Application {
 
+
 @Override
 public void start(Stage premierStage){
 //Image de fond
-    Image background = new Image("file:ressources/images/background.png");
+    Image background = new Image(getClass().getResourceAsStream("/ressources/images/background.png"));
     ImageView backgroundView = new ImageView(background);
     backgroundView.setPreserveRatio(false);
 
@@ -37,7 +41,7 @@ Text titreBvn = new Text("Bienvenue dans ");
 titreBvn.setFont(Font.font("Verdana", 28));
 titreBvn.setFill(Color.LAVENDER);
 
-Text nomApp = new Text("SarahSekai");
+Text nomApp = new Text("SarttleSekai");
 nomApp.setFont(Font.font("Verdana", 38));
 nomApp.setFill(Color.LAVENDER);
 
@@ -47,6 +51,19 @@ blocTitre.setAlignment(Pos.CENTER);
 Button btnentrer = new Button("Entrer dans l'univers");
 btnentrer.setStyle("-fx-background-color: #f2789f; -fx-text-fill: white; -fx-font-size: 14pt; -fx-background-radius: 20px;");
 btnentrer.getStyleClass().add("bouton-entree");
+
+btnentrer.setOnAction(e -> {
+    try {
+        Parent rootMenu = FXMLLoader.load(getClass().getResource("/vue/MenuPrincipal.fxml"));
+        Scene sceneMenu = new Scene(rootMenu, 800, 600);
+        sceneMenu.getStylesheets().add(getClass().getResource("/ressources/css/style.css").toExternalForm());
+        premierStage.setScene(sceneMenu);
+
+    } catch (IOException ex){
+        ex.printStackTrace();
+    }
+
+});
 
 Region espace = new Region();
 espace.setMinHeight(50);
@@ -66,7 +83,7 @@ root.getChildren().add(contenu);
 // Creation de la scène
 
 Scene scene = new Scene(root, 800, 600); //taille de base
-scene.getStylesheets().add("file:ressources/css/style.css");
+scene.getStylesheets().add(getClass().getResource("/ressources/css/style.css").toExternalForm());
 //Liaison dynamique pour que l'image suive la taille de la fenetre
 backgroundView.fitWidthProperty().bind(scene.widthProperty());
 backgroundView.fitHeightProperty().bind(scene.heightProperty());
@@ -84,6 +101,7 @@ root.getChildren().add(animationLayer);
 premierStage.show();
 
 }
+
 
 
 public static void main(String[] args){

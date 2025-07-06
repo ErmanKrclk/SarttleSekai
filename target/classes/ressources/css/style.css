@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "PoliceBulles";
+    src: url("fonts/BalonkuRegular-la1w.otf");
+}
+
+.label-kawaii{
+    -fx-font-family: "PoliceBulles";
+
+}
+
+.bouton-entree{
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 0, 2);
+
+}
+
+.bouton-entree:hover{
+    -fx-background-color: #f47fa3;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.5, 0, 3);
+}
+
+.bouton-nav{
+    -fx-cursor: hand;
+    -fx-background-color: #f2789f;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-background-radius: 20;
+    -fx-padding: 5 15;
+    -fx-effect: dropshadow(gaussian, rgba(255, 89, 252, 0.802), 4, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.bouton-nav:hover{
+    -fx-background-color: #ff407f;
+    -fx-effect: dropshadow(gaussian, rgba(255, 89, 252, 0.802), 6, 0.5, 0, 2.5);
+}
