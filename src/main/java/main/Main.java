@@ -105,6 +105,10 @@ premierStage.show();
 
 
 public static void main(String[] args){
+    Font.loadFont(Main.class.getResourceAsStream("/ressources/fonts/BalonkuRegular-la1w.otf"), 10);
+    System.out.println(Font.getFontNames().stream()
+    .filter(name -> name.toLowerCase().contains("balonku"))
+    .toList());
     launch(args);
 }
 

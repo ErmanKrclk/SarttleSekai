@@ -1,11 +1,16 @@
 @font-face {
     font-family: "PoliceBulles";
-    src: url("fonts/BalonkuRegular-la1w.otf");
+    src: url("../fonts/BalonkuRegular-la1w.otf");
 }
 
 .label-kawaii{
     -fx-font-family: "PoliceBulles";
 
+}
+
+.label-kawaii-titre {
+    -fx-font-size: 35pt;
+    -fx-text-fill: rgb(208, 109, 200);
 }
 
 .bouton-entree{
