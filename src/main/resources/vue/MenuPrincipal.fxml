@@ -20,8 +20,8 @@
     <ImageView fx:id="logo" fitHeight="32" fitWidth="32"/>
     <Label text = "SarttleSekai" style = "-fx-font-size: 16pt; -fx-text-fill: #a66fa1;"/>
     <Region HBox.hgrow="ALWAYS"/>
-    <Button text= "Acceuil" styleClass = "bouton-nav"/>
-    <Button text= "Délires" styleClass = "bouton-nav"/>
+    <Button fx:id = "btnAcceuil" text= "Acceuil" styleClass = "bouton-nav"/>
+    <Button fx:id = "btnDelire" text= "Délires" styleClass = "bouton-nav"/>
     <Button text= "Soundboard" styleClass = "bouton-nav"/>
     <Button text= "A propos" styleClass = "bouton-nav"/>
     <Button text= "☰" styleClass = "bouton-nav"/>

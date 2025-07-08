@@ -1,10 +1,16 @@
 package controlleur;
 
+import javafx.scene.Parent;
+import java.io.IOException;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class ControlleurEntrer {
     
@@ -15,14 +21,14 @@ public class ControlleurEntrer {
     private Button btnQuitter;
 
     @FXML
+    private Button btnDelire;
+
+    @FXML
     private ImageView backgroundImage;
 
     @FXML
     public void initialize(){
     if (backgroundImage != null) {
-        backgroundImage.fitWidthProperty().bind(backgroundImage.getScene().widthProperty());
-        backgroundImage.fitHeightProperty().bind(backgroundImage.getScene().heightProperty());
-        // Pour que le binding fonctionne même si la scène n'est pas encore prête
         backgroundImage.sceneProperty().addListener((obs, oldScene, newScene) -> {
             if (newScene != null) {
                 backgroundImage.fitWidthProperty().bind(newScene.widthProperty());
@@ -35,6 +41,19 @@ public class ControlleurEntrer {
         logo.setImage(img);
 
         btnQuitter.setOnAction(e -> Platform.exit());
+
+        btnDelire.setOnAction(e -> {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("/vue/Delires.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch(IOException ex){
+                ex.printStackTrace();
+            }
+        });
     }
 }
 }

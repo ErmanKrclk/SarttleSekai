@@ -13,35 +13,19 @@
     </image>
 </ImageView>
 
-
 <VBox spacing="0">
 <!-- Barre de navigation -->
 <HBox spacing = "20" alignment = "CENTER_LEFT" style = "-fx-padding: 10; -fx-background-color: #fcd3de;">
     <ImageView fx:id="logo" fitHeight="32" fitWidth="32"/>
     <Label text = "SarttleSekai" style = "-fx-font-size: 16pt; -fx-text-fill: #a66fa1;"/>
     <Region HBox.hgrow="ALWAYS"/>
-    <Button fx:id = "btnAcceuil" text= "Acceuil" styleClass = "bouton-nav"/>
-    <Button fx:id = "btnDelire" text= "Délires" styleClass = "bouton-nav"/>
+    <Button text= "Acceuil" styleClass = "bouton-nav"/>
+    <Button text= "Délires" styleClass = "bouton-nav"/>
     <Button text= "Soundboard" styleClass = "bouton-nav"/>
     <Button text= "A propos" styleClass = "bouton-nav"/>
     <Button text= "☰" styleClass = "bouton-nav"/>
 
 </HBox>
-
-<!-- Contenu -->
-
-<HBox alignment="CENTER_RIGHT" style="-fx-padding: 140;">
-    <VBox alignment="CENTER" spacing="5">
-        <Label text= "Content" style="-fx-font-size: 35pt; -fx-text-fill:rgb(208, 109, 200);" styleClass="label-kawaii label-kawaii-titre"/>
-        <Label text= "que tu sois là Sarttle ❤️" style="-fx-font-size: 25pt; -fx-text-fill:rgb(166, 162, 166);" styleClass="label-kawaii"/>
-    </VBox>
-</HBox>
-
-<Region VBox.vgrow="ALWAYS"/>
-<HBox spacing = "20" alignment = "BOTTOM_RIGHT" style = "-fx-padding: 10; -fx-background-color: #fce4ec;">
-    <Button fx:id="btnQuitter" text = "Quitter l'application" styleClass="bouton-nav"/>
-</HBox>
-<!-- On mettera des images ici plus tard-->
 
 </VBox>
 </StackPane>
