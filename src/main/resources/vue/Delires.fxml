@@ -36,7 +36,7 @@
 
         <!-- Délire 1 -->
         <HBox spacing = "15" alignment = "CENTER_LEFT">
-                <Label text= "Chien arret maladie" styleClass = "bouton-delire"/>
+                <Button fx:id="btnChien" text= "Chien arret maladie" styleClass = "bouton-delire"/>
                 <ImageView fitHeight = "40" fitWidth = "40" preserveRatio = "true">
                     <image>
                         <Image url="@/ressources/images/malinoisVisage.png"/>
@@ -46,7 +46,7 @@
         
         <!-- Délire 2 -->
         <HBox spacing = "15" alignment = "CENTER_LEFT">
-                <Label text= "Bowling" styleClass = "bouton-delire"/>
+                <Button fx:id="btnBowling" text= "Bowling" styleClass = "bouton-delire"/>
                 <ImageView fitHeight = "40" fitWidth = "40" preserveRatio = "true">
                     <image>
                         <Image url="@/ressources/images/bowling.jpg"/>

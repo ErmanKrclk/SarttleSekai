@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.Modality;
 
 public class ControlleurDelires {
 
@@ -23,6 +24,10 @@ public class ControlleurDelires {
 
     @FXML
     private Button btnAcceuil;
+    @FXML
+    private Button btnChien;
+    @FXML
+    private Button btnBowling;
 
     @FXML
     public void initialize(){
@@ -55,6 +60,42 @@ public class ControlleurDelires {
     }
 
 applyCSS();
+
+    if (btnChien != null){
+        btnChien.setOnAction(e -> ouvrirFenetreDelire(
+            "Chien arret maladie",
+            "Quand le chien est intoxifier par les poubelles a stirox",
+            "/ressources/images/malinoisVisage.png"
+        ));
+    }
+
+    if (btnBowling != null){
+        btnBowling.setOnAction(e -> ouvrirFenetreDelire(
+            "Bowling",
+            "Sarah qui me spawn kill h24",
+            "/ressources/images/bowling.jpg"
+        ));
+    }
+}
+
+private void ouvrirFenetreDelire(String titre, String texte, String imagePath) {
+    try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/DeliresDetail.fxml"));
+        Parent root = fxmlLoader.load();
+
+        ControlleurDelireDetail controller = fxmlLoader.getController();
+        controller.setContenu(titre, texte, imagePath);
+
+        Stage stage = new Stage();
+        stage.setTitle(titre);
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+    } catch (IOException e){
+        e.printStackTrace();
+    }
+
 }
 
 private void applyCSS(){
