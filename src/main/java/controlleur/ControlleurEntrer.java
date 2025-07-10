@@ -40,12 +40,15 @@ public class ControlleurEntrer {
         Image img = new Image(getClass().getResourceAsStream("/ressources/app_icon.png"));
         logo.setImage(img);
 
-        btnQuitter.setOnAction(e -> Platform.exit());
+        if (btnQuitter != null){
+        btnQuitter.setOnAction(e -> Platform.exit());}
 
+        if (btnDelire != null){
         btnDelire.setOnAction(e -> {
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("/vue/Delires.fxml"));
-                Scene scene = new Scene(root);
+                Scene scene = new Scene(root, 800, 600);
+                scene.getStylesheets().add(getClass().getResource("/ressources/css/style.css").toExternalForm());
                 Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 stage.setScene(scene);
                 stage.show();
@@ -54,6 +57,6 @@ public class ControlleurEntrer {
                 ex.printStackTrace();
             }
         });
-    }
+    }}
 }
 }

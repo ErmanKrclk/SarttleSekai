@@ -8,10 +8,6 @@
 
 }
 
-.label-kawaii-titre {
-    -fx-font-size: 35pt;
-    -fx-text-fill: rgb(208, 109, 200);
-}
 
 .bouton-entree{
     -fx-cursor: hand;
@@ -38,4 +34,20 @@
 .bouton-nav:hover{
     -fx-background-color: #ff407f;
     -fx-effect: dropshadow(gaussian, rgba(255, 89, 252, 0.802), 6, 0.5, 0, 2.5);
+}
+
+.bouton-delire{
+    -fx-cursor:hand;
+    -fx-font-size: 15pt; 
+    -fx-text-fill: rgb(228,116,135); 
+    -fx-background-color: rgb(255,227,233);
+    -fx-background-radius: 10px;
+    -fx-padding: 5 10;
+    
+}
+
+.bouton-delire:hover{
+    -fx-background-color:rgb(228,116,135);
+    -fx-text-fill: rgb(255,227,233);
+    
 }

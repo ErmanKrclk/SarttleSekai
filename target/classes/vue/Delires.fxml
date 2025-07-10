@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="controlleur.ControlleurEntrer">
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="controlleur.ControlleurDelires">
 
 <!-- Image de fond -->
 <ImageView fx:id="backgroundImage" preserveRatio="false">
@@ -16,16 +16,46 @@
 <VBox spacing="0">
 <!-- Barre de navigation -->
 <HBox spacing = "20" alignment = "CENTER_LEFT" style = "-fx-padding: 10; -fx-background-color: #fcd3de;">
-    <ImageView fx:id="logo" fitHeight="32" fitWidth="32"/>
+    <ImageView fx:id="logo" fitHeight="36" fitWidth="36"/>
     <Label text = "SarttleSekai" style = "-fx-font-size: 16pt; -fx-text-fill: #a66fa1;"/>
     <Region HBox.hgrow="ALWAYS"/>
-    <Button text= "Acceuil" styleClass = "bouton-nav"/>
-    <Button text= "Délires" styleClass = "bouton-nav"/>
+    <Button fx:id = "btnAcceuil" text= "Acceuil" styleClass = "bouton-nav"/>
+    <Button fx:id = "btnDelire" text= "Délires" styleClass = "bouton-nav"/>
     <Button text= "Soundboard" styleClass = "bouton-nav"/>
     <Button text= "A propos" styleClass = "bouton-nav"/>
     <Button text= "☰" styleClass = "bouton-nav"/>
 
 </HBox>
+
+<!-- Contenu -->
+
+<VBox spacing="20" alignment="TOP_LEFT" style="-fx-padding: 35;">
+    <Label text="Liste des délires" style="-fx-font-size: 30pt; -fx-text-fill: white; -fx-background-color: rgb(252, 211, 222); -fx-border-color:rgb(253, 177, 197); -fx-border-radius:10px; -fx-background-radius:10px; -fx-border-width: 2px; -fx-padding: 10px;" styleClass="label-kawaii"/>
+        
+    <VBox spacing="15" alignment="TOP_LEFT"> 
+
+        <!-- Délire 1 -->
+        <HBox spacing = "15" alignment = "CENTER_LEFT">
+                <Label text= "Chien arret maladie" styleClass = "bouton-delire"/>
+                <ImageView fitHeight = "40" fitWidth = "40" preserveRatio = "true">
+                    <image>
+                        <Image url="@/ressources/images/malinoisVisage.png"/>
+                    </image>
+                </ImageView>
+        </HBox>
+        
+        <!-- Délire 2 -->
+        <HBox spacing = "15" alignment = "CENTER_LEFT">
+                <Label text= "Bowling" styleClass = "bouton-delire"/>
+                <ImageView fitHeight = "40" fitWidth = "40" preserveRatio = "true">
+                    <image>
+                        <Image url="@/ressources/images/bowling.jpg"/>
+                    </image>
+                </ImageView>
+        </HBox>
+
+    </VBox>
+</VBox>
 
 </VBox>
 </StackPane>
