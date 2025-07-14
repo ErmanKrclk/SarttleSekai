@@ -64,7 +64,7 @@ applyCSS();
     if (btnChien != null){
         btnChien.setOnAction(e -> ouvrirFenetreDelire(
             "Chien arret maladie",
-            "Quand le chien est intoxifier par les poubelles a stirox",
+            "Un triste jour, la police faisait des rondes dans le logement les Ormes à Orléans avec le chien. Ce chien qui était entrainé à sentir la drogue à travers les portes (weed , beuh..). Une fois arrivé à la porte 204 , le chien senti une forte odeur étrange, il pensait que c'était des champignons hallucinogènes. Il saute sur la porte jusqu'à presque la cassé. Les policiers ont directement compris que quelque chose clochait. Les policiers décident d'ouvrir la porte quand soudain, une odeur nauseabonde leur saute au nez. \n Le chien , ayant une plus grosse sensibilité au niveau de l'odorat, ne tient pas le coup. Il court au chiotte de stirox pour vomir.. Une fois avoir vomi, il décide enfin de parler et il à dit au policiers << non c'est bon là c'est trop >>. Les policiers, choqués et furieux décident de saccagé l'appartement de Stirox_la_6t. La poubelle par terre, et les casseroles renversé. Le chien à du prendre des semaines de congés, tous utilisées d'un coup. Puis survenu d'un arret maladie car son nez avait subit un trop gros choc.",
             "/ressources/images/malinoisVisage.png"
         ));
     }
