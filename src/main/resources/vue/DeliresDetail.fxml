@@ -4,10 +4,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controlleur.ControlleurDelireDetail" prefWidth = "595" prefHeight = "575">
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controlleur.ControlleurDelireDetail" prefWidth = "595" prefHeight = "625">
     <children>
-        <Label fx:id = "titreDelire" layoutX = "30" layoutY = "30" style = "-fx-font-size: 24px; -fx-text-fill: #e2679d;"/> 
-        <ImageView fx:id = "imageDelire" layoutX = "30" layoutY = "80" fitWidth = "200" fitHeight = "200"/>
-        <TextArea fx:id = "textDelire" layoutX = "30" layoutY = "300" prefWidth = "535" prefHeight = "350" wrapText = "true"/> 
+        <VBox spacing = "20" layoutX = "30" layoutY = "30">
+            <Label fx:id = "titreDelire" style = "-fx-font-size: 24px; -fx-text-fill: #e2679d;"/> 
+            <ImageView fx:id = "imageDelire" layoutX = "30" layoutY = "80" fitWidth = "200" fitHeight = "200"/>
+            <TextArea fx:id = "textDelire" layoutX = "30" layoutY = "200" prefWidth = "535" prefHeight = "195" wrapText = "true"/> 
+        </VBox>
     </children>
 </AnchorPane>
